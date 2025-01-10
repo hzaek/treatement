@@ -1,0 +1,140 @@
+*,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.App {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../public/room.jpg);
+  background-size: cover;
+  flex-direction: column;
+  background-position: center;
+}
+.room {
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.room input {
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  padding: 5px;
+}
+
+/* CreateRoom */
+.listsContainer {
+  margin-top: 20px;
+  background-color: #eee;
+  height: 200px;
+  width: 100%;
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  overflow: auto;
+}
+/* CreateRoom */
+
+/* loader */
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-right: 5px solid white;
+  top: 30%;
+  transform: translatex(50%);
+  border-radius: 50%;
+  right: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translatex(50%);
+  -moz-transform: translatex(50%);
+  -ms-transform: translatex(50%);
+  -o-transform: translatex(50%);
+  animation: loader linear infinite;
+  -webkit-animation: loader linear infinite 1.5s;
+  opacity: 0;
+}
+
+@keyframes loader {
+  0% {
+    transform: translatex(50%) rotate(0deg);
+    -webkit-transform: translatex(50%) rotate(0deg);
+    -moz-transform: translatex(50%) rotate(0deg);
+    -ms-transform: translatex(50%) rotate(0deg);
+    -o-transform: translatex(50%) rotate(0deg);
+  }
+  100% {
+    transform: translatex(50%) rotate(360deg);
+    -webkit-transform: translatex(50%) rotate(360deg);
+    -moz-transform: translatex(50%) rotate(360deg);
+    -ms-transform: translatex(50%) rotate(360deg);
+    -o-transform: translatex(50%) rotate(360deg);
+  }
+}
+/* loader */
+
+/* Current Room */
+.CurrentRoom {
+  height: 100svh;
+  display: flex;
+  background-image: url(../public/room.jpg);
+  background-size: cover;
+  flex-direction: column;
+  background-position: center;
+}
+.CurrentRoom .sections {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  color: black;
+  gap: 10px;
+  list-style: none;
+  padding: 20px 15px;
+}
+.CurrentRoom .sections li {
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  padding: 7px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.CurrentRoom .sections .selected{
+  background-image: linear-gradient(to top, #000000 0%, #000000 100%);
+  background-color: black;
+  color: white;
+}
+/* Current Room */
